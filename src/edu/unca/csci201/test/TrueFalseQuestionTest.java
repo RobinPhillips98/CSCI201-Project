@@ -1,10 +1,10 @@
 package edu.unca.csci201.test;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import edu.unca.csci201.Answer;
 import edu.unca.csci201.InvalidResponseException;
@@ -17,7 +17,7 @@ public class TrueFalseQuestionTest {
 
 	TrueFalseQuestion question;
 	
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		question = new TrueFalseQuestion("The answer to this question is true", true);
 	}
@@ -25,7 +25,7 @@ public class TrueFalseQuestionTest {
 	@Test
 	public void testGetTextPrompt() {
 
-		assertTrue("Text prompt not returned correctly", question.getTextPrompt().equals("The answer to this question is true"));
+		assertTrue(question.getTextPrompt().equals("The answer to this question is true"), "Text prompt not returned correctly");
 	}
 
 	@Test
@@ -46,7 +46,7 @@ public class TrueFalseQuestionTest {
 		
 		TrueFalseAnswer tfAns = (TrueFalseAnswer) ans;
 		
-		assertTrue("Incorrect answer returned for the true/false question", tfAns.isSameAs(new TrueFalseAnswer(true)));
+		assertTrue(tfAns.isSameAs(new TrueFalseAnswer(true)), "Incorrect answer returned for the true/false question");
 		
 	}
 
@@ -56,13 +56,13 @@ public class TrueFalseQuestionTest {
 		
 		TrueFalseAnswer tfAns = (TrueFalseAnswer) ans;
 		
-		assertTrue("Incorrect answer returned converting user response 't'", tfAns.isSameAs(new TrueFalseAnswer(true)));
+		assertTrue(tfAns.isSameAs(new TrueFalseAnswer(true)), "Incorrect answer returned converting user response 't'");
 
 		ans = question.convertResponseToAnswer("f");
 		
 		tfAns = (TrueFalseAnswer) ans;
 		
-		assertTrue("Incorrect answer returned converting user response 'f'", tfAns.isSameAs(new TrueFalseAnswer(false)));
+		assertTrue(tfAns.isSameAs(new TrueFalseAnswer(false)), "Incorrect answer returned converting user response 'f'");
 		
 
 		try {

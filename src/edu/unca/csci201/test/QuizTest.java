@@ -1,13 +1,13 @@
 package edu.unca.csci201.test;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.ByteArrayInputStream;
 import java.util.NoSuchElementException;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import edu.unca.csci201.Quiz;
 import edu.unca.csci201.QuizFullException;
@@ -16,7 +16,7 @@ public class QuizTest {
 
 	private Quiz myQuiz;
 	
-	@Before
+	@BeforeEach
 	public void setupQuiz() {
 		myQuiz = new Quiz();
 	}
@@ -44,7 +44,7 @@ public class QuizTest {
 		
 		double score = myQuiz.giveQuiz();
 		
-		assertTrue( "Score should be zero", Math.abs(score) <= 0.000001);
+		assertTrue( Math.abs(score) <= 0.000001, "Score should be zero");
 	
 	}
 	
@@ -59,7 +59,7 @@ public class QuizTest {
 
 		double score = myQuiz.giveQuiz();
 		
-		assertTrue( "Score should be greater than zero", Math.abs(score) > 0.000001);
+		assertTrue( Math.abs(score) > 0.000001, "Score should be greater than zero");
 
 	}
 	
@@ -73,7 +73,7 @@ public class QuizTest {
 
 		double score = myQuiz.giveQuiz();
 		
-		assertTrue( "Score should be zero", Math.abs(score) <= 0.000001);
+		assertTrue( Math.abs(score) <= 0.000001, "Score should be zero");
 	}
 
 	@Test
@@ -88,7 +88,7 @@ public class QuizTest {
 
 		double score = myQuiz.giveQuiz();
 		
-		assertTrue( "Score should be greater than one", Math.abs(score) > 1.0);
+		assertTrue( Math.abs(score) > 1.0, "Score should be greater than one");
 
 	}
 	
@@ -129,7 +129,7 @@ public class QuizTest {
 		
 		double score = myQuiz.giveQuiz();
 		
-		assertTrue( "Score should be zero", Math.abs(score) <= 0.000001);
+		assertTrue( Math.abs(score) <= 0.000001, "Score should be zero");
 
 	}
 	
