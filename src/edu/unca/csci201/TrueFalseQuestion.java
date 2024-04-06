@@ -30,9 +30,9 @@ public class TrueFalseQuestion implements Question {
 	@Override
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
 		boolean answer;
-		if (userResponse.equals("t"))
+		if (userResponse.equalsIgnoreCase("t"))
 				answer = true;
-		else if (userResponse.equals("f"))
+		else if (userResponse.equalsIgnoreCase("f"))
 			answer = false;
 		else
 			throw new InvalidResponseException();

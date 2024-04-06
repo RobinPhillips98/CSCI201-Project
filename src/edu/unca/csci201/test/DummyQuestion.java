@@ -3,6 +3,7 @@ package edu.unca.csci201.test;
 import edu.unca.csci201.Answer;
 import edu.unca.csci201.InvalidResponseException;
 import edu.unca.csci201.NoAnswersException;
+import edu.unca.csci201.NoCorrectAnswerException;
 import edu.unca.csci201.Question;
 
 public class DummyQuestion implements Question {
