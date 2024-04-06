@@ -1,5 +1,5 @@
 package edu.unca.csci201;
 
-public class InvalidResponseException extends Exception {
+public class InvalidResponseException extends QuizBaseException {
 
 }
