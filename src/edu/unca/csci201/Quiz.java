@@ -33,19 +33,26 @@ public class Quiz {
 					break;
 				else {
 					
-					System.out.println(currentQuestion.getTextPrompt());
-					try
-					{
-						Answer answer = currentQuestion.convertResponseToAnswer(scan.nextLine());
-						if (answer.isSameAs(currentQuestion.getCorrectAnswer())) {
-							correctAnswers++;
-						}
-					}
-					catch (InvalidResponseException e)
-					{
-						System.out.println("Response invalid. Please try again");
-					}
+					boolean isInvalid;
 					
+					System.out.println(currentQuestion.getTextPrompt());
+					do {
+						isInvalid = false;
+						try
+						{
+							Answer answer = currentQuestion.convertResponseToAnswer(scan.nextLine());
+							if (answer.isSameAs(currentQuestion.getCorrectAnswer())) {
+								correctAnswers++;
+							}
+						}
+						catch (InvalidResponseException e)
+						{
+							
+							isInvalid=true;
+							System.out.println("Response invalid. Please try again");
+						
+						}
+					} while (isInvalid == true);
 				}
 					
 						
@@ -58,7 +65,7 @@ public class Quiz {
 		
 		
 		if (i > 0)
-			return (correctAnswers / i) * 100;
+			return ((double) correctAnswers / i) * 100;
 		else
 			return 0;
 		
