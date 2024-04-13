@@ -31,16 +31,22 @@ public class MultipleChoiceQuestion implements Question {
 		
 		char answer;
 		
-		if (userResponse.equalsIgnoreCase("A"))
-			answer = 'A';
-		else if (userResponse.equalsIgnoreCase("B"))
-			answer = 'B';
-		else if (userResponse.equalsIgnoreCase("C"))
-			answer = 'C';
-		else if (userResponse.equalsIgnoreCase("D"))
-			answer = 'D';
-		else
-			throw new InvalidResponseException();
+		switch (userResponse.toUpperCase()) {
+			case "A":
+				answer = 'A';
+				break;
+			case "B":
+				answer = 'B';
+				break;
+			case "C":
+				answer = 'C';
+				break;
+			case "D":
+				answer = 'D';
+				break;
+			default:
+				throw new InvalidResponseException();
+		}
 	
 		return new MultipleChoiceAnswer(answer);
 	}
