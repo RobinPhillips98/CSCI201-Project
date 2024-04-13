@@ -1,11 +1,14 @@
 package edu.unca.csci201;
 
 public class QuizTime {
+	
+	//------------------------------------------------------------------------------------------
+	// Presents a quiz to the user, records their answers, and prints their score.
+	//-----------------------------------------------------------------------------------------
 
 	public static void main(String[] args) throws QuizBaseException, InterruptedException {
 		
 		Quiz quiz = new Quiz();
-		
 
 		System.out.println("                  ULTIMATE STAR WARS QUIZ                      \n");
 		
@@ -22,14 +25,16 @@ public class QuizTime {
 		Thread.sleep(1000);
 		System.out.println("Loading quiz...");
 		Thread.sleep(1000);
+		System.out.println();
+		
 		
 		quiz.addQuestion(new TrueFalseQuestion("True or False: Darth Vader is Luke Skywalker's father", true));
-		quiz.addQuestion(new FillInTheBlankQuestion("What is Mando's real name from The Mandalorian?", "Din Djarin"));
-		quiz.addQuestion(new MultipleChoiceQuestion("What is the name of Han Solo's Ship?\nA. Ebon Hawk\nB. Millenium Falcon\nC. Serenity\nD.Executor", 'B'));
-		quiz.addQuestion(new FillInTheBlankQuestion("Han Solo was frozen in what?", "Carbonite"));
+		quiz.addQuestion(new FillInTheBlankQuestion("Mando's real name from The Mandalorian is ___ Djarin", "Din"));
+		quiz.addQuestion(new MultipleChoiceQuestion("What is the name of Han Solo's Ship?\nA. Ebon Hawk\nB. Millenium Falcon\nC. Serenity\nD. Executor", 'B'));
+		quiz.addQuestion(new FillInTheBlankQuestion("Han Solo was frozen in _________", "Carbonite"));
 		quiz.addQuestion(new TrueFalseQuestion("True or False: Boba Fett survived the Sarlacc pit", true));
 		quiz.addQuestion(new MultipleChoiceQuestion("Who created Star Wars?\nA. George Lucas\nB. Steven Spielberg\nC. Denis Villeneuve\nD. Robert Jordan", 'A'));
-		quiz.addQuestion(new FillInTheBlankQuestion("Which character said, \"Help me Obi-Wan Kenobi. You are my only hope\"?", "Leia"));
+		quiz.addQuestion(new FillInTheBlankQuestion("\"Help me Obi-Wan Kenobi. You are my only hope\" was said by Princess ____", "Leia"));
 		quiz.addQuestion(new MultipleChoiceQuestion("What is Darth Sidious's real name?\nA. Quintus Palpatine\nB. Valkorion\nC. Anakin Skywalker\nD. Sheev Palpatine", 'D'));
 		quiz.addQuestion(new TrueFalseQuestion("True or false: The Death Star II was destroyed over Yavin IV by Luke Skywalker", false));
 		quiz.addQuestion(new MultipleChoiceQuestion("Padme Amidala was queen of what planet?\nA. Korriban\nB. Naboo\nC. Aldeeran\nD. Coruscant", 'B'));
@@ -41,6 +46,14 @@ public class QuizTime {
 		double score = quiz.giveQuiz();
 		
 		System.out.println("\n\nQUIZ COMPLETE!\n");
+		
+		System.out.println("Grading quiz...");
+		Thread.sleep(1000);
+		System.out.println("Grading quiz...");
+		Thread.sleep(1000);
+		System.out.println("Grading quiz...");
+		Thread.sleep(1000);
+		System.out.println();
 		
 		System.out.println("Your score is: " + score + "%!");
 		

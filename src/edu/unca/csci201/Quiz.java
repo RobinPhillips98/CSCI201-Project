@@ -1,4 +1,4 @@
-package edu.unca.csci201;
+ package edu.unca.csci201;
 
 import java.util.Scanner;
 
