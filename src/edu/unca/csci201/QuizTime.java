@@ -13,9 +13,11 @@ public class QuizTime {
 		System.out.println("                  ULTIMATE STAR WARS QUIZ                      \n");
 		
 		System.out.println("        INSTRUCTIONS        ");
-		System.out.println("For multiple choice questions: type only the letter 'A', 'B', 'C', or 'D'");
-		System.out.println("For true or false questions: type only 'T' or 'F'");
-		System.out.println("For fill-in-the blank questions: type your answer");
+		System.out.println("For each question: Type in your answer with the keyboard then press enter.");
+		System.out.println("For multiple choice questions: type only the letter 'A', 'B', 'C', or 'D'.");
+		System.out.println("For true or false questions: type true or t for true, or false or f for false.");
+		System.out.println("For fill-in-the blank questions: type your answer.");
+		System.out.println("The quiz is not case-sensitive.");
 		System.out.println();
 		
 		//"Improved" user experience
@@ -55,7 +57,20 @@ public class QuizTime {
 		Thread.sleep(1000);
 		System.out.println();
 		
-		System.out.println("Your score is: " + score + "%!");
+		
+		final double TOLERANCE = 0.01;
+		
+		if (Math.abs(score - 100) <= TOLERANCE)
+			System.out.println("You got a perfect score! Great job!");
+		else {
+			
+			System.out.println("Your score is " + score + "%!");
+			System.out.println();
+			quiz.printIncorrectAnswers();
+			
+		}
+		
+		System.out.println("May the force be with you.");
 		
 	}
 

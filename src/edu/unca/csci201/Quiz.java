@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Quiz {
 	
 	Question[] quizQuestions = new Question[25];
+	Question[] incorrectQuestions = new Question[25];
 	int i;
 
 	public void addQuestion (Question question) throws QuizFullException {
@@ -19,6 +20,7 @@ public class Quiz {
 	public double giveQuiz() throws QuizBaseException {
 		
 		int correctAnswers = 0;
+		int j = 0; //Counter for incorrect questions array
 		
 		
 		if (quizQuestions[0] == null)
@@ -41,9 +43,15 @@ public class Quiz {
 						try
 						{
 							Answer answer = currentQuestion.convertResponseToAnswer(scan.nextLine());
-							if (answer.isSameAs(currentQuestion.getCorrectAnswer())) {
+							if (answer.isSameAs(currentQuestion.getCorrectAnswer()))
 								correctAnswers++;
+							else {
+								
+								incorrectQuestions[j] = currentQuestion;
+								j++;
+								
 							}
+								
 						}
 						catch (InvalidResponseException e)
 						{
@@ -68,6 +76,27 @@ public class Quiz {
 			return ((double) correctAnswers / i) * 100;
 		else
 			return 0;
+		
+	}
+	
+	public void printIncorrectAnswers() throws NoCorrectAnswerException {
+		
+		if (incorrectQuestions[0] != null) {
+			
+			System.out.println("Incorrect answers: ");
+			System.out.println();
+		
+			for (Question currentQuestion : incorrectQuestions) {
+				if (currentQuestion == null )
+					break;
+				else {
+					System.out.println(currentQuestion.getTextPrompt());
+					System.out.println("Correct Answer: " + currentQuestion.getCorrectAnswer());
+					System.out.println();
+				}
+			}
+		} else
+			System.out.println("No incorrect answers!");
 		
 	}
 
