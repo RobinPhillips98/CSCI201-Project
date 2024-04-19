@@ -31,12 +31,14 @@ public class TrueFalseQuestion implements Question {
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
 		boolean answer;
 		
-		switch (userResponse.toUpperCase()) {
+		switch (userResponse.toLowerCase()) {
 		
-		case "T":
+		case "true":
+		case "t":
 			answer = true;
 			break;
-		case "F":
+		case "false":
+		case "f":
 			answer = false;
 			break;
 		default:

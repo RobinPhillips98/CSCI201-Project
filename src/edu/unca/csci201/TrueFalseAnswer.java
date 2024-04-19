@@ -15,9 +15,9 @@ public class TrueFalseAnswer implements Answer {
 	
 	public String toString() {
 		if (answer == true)
-			return "true";
+			return "True";
 		else if (answer == false)
-			return "false";
+			return "False";
 		else
 			return null;
 	}
