@@ -18,8 +18,8 @@ public class MultipleChoiceAnswer implements Answer {
 	public boolean isSameAs(Answer other) {
 		
 		MultipleChoiceAnswer mcAns = (MultipleChoiceAnswer) other;
-		
 		return (mcAns.answer == this.answer);
+		
 	}
 	
 	public String toString() {

@@ -23,6 +23,7 @@ public class ShortAnswerQuestionTest {
 	
 	@Test
 	public void testGetPossibleAnswers() {
+		
 		try {
 			question.getPossibleAnswers();
 		} catch (NoAnswersException e) {
@@ -31,10 +32,12 @@ public class ShortAnswerQuestionTest {
 		}
 		
 		fail("Exception not thrown when fill-in-the-blank question asked for a list of possible answers");
+		
 	}
 	
 	@Test
 	public void testGetCorrectAnswer() {
+		
 		try {
 			question.getCorrectAnswer();
 		} catch (NoCorrectAnswerException e) {
@@ -43,6 +46,7 @@ public class ShortAnswerQuestionTest {
 		}
 		
 		fail("Exception not thrown when fill-in-the-blank question asked for a list of possible answers");
+	
 	}
 	
 	@Test

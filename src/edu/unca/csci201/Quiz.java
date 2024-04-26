@@ -9,11 +9,15 @@ public class Quiz {
 	private int i = 0;
 
 	public void addQuestion (Question question) throws QuizFullException {
+		
 		if (i > 24)
 			throw new QuizFullException();
+		
 		else {
+			
 			quizQuestions[i] = question;
 			i++;
+			
 		}
 	}
 
@@ -23,9 +27,9 @@ public class Quiz {
 		int questionsToGrade = 0;
 		int j = 0; //Counter for incorrect questions array
 		
-		
 		if (quizQuestions[0] == null)
 			return 0.0;
+		
 		else {
 			
 			Scanner scan = new Scanner(System.in);
@@ -34,6 +38,7 @@ public class Quiz {
 				
 				if (currentQuestion == null)
 					break;
+				
 				else {
 					
 					boolean isInvalid;
@@ -43,16 +48,20 @@ public class Quiz {
 					if (currentQuestion instanceof MultipleChoiceQuestion) {
 						for (Answer currentAnswer: currentQuestion.getPossibleAnswers()) {
 							System.out.println(currentAnswer);
+							
 						}
 					}
 					
 					do {
+						
 						isInvalid = false;
-						try
-						{
+						
+						try {
+							
 							Answer answer = currentQuestion.convertResponseToAnswer(scan.nextLine());
 							if (answer.isSameAs(currentQuestion.getCorrectAnswer()))
 								correctAnswers++;
+							
 							else {
 								
 								incorrectQuestions[j] = currentQuestion;
@@ -75,15 +84,12 @@ public class Quiz {
 						}
 					} while (isInvalid == true);
 				}
-					
-						
+								
 				}
 			
 			scan.close();
 			
 		}
-	
-		
 		
 		if (questionsToGrade > 0)
 			return (double) correctAnswers / questionsToGrade;
@@ -100,15 +106,21 @@ public class Quiz {
 			System.out.println();
 		
 			for (Question currentQuestion : incorrectQuestions) {
+				
 				if (currentQuestion == null )
 					break;
+				
 				else {
+					
 					System.out.println(currentQuestion.getTextPrompt());
 					System.out.println("Correct Answer: " + currentQuestion.getCorrectAnswer());
 					System.out.println();
+					
 				}
 			}
-		} else
+		} 
+		
+		else
 			System.out.println("No incorrect answers!");
 		
 	}

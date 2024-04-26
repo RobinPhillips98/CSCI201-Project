@@ -30,6 +30,7 @@ public class FillInTheBlankQuestionTest {
 	
 	@Test
 	public void testGetPossibleAnswers() {
+		
 		try {
 			question.getPossibleAnswers();
 		} catch (NoAnswersException e) {
@@ -38,6 +39,7 @@ public class FillInTheBlankQuestionTest {
 		}
 		
 		fail("Exception not thrown when fill-in-the-blank question asked for a list of possible answers");
+		
 	}
 	
 	@Test
@@ -47,7 +49,8 @@ public class FillInTheBlankQuestionTest {
 		
 		SingleWordAnswer swAns = (SingleWordAnswer) ans;
 		
-		assertTrue(swAns.isSameAs(question.getCorrectAnswer()), "Incorrect answer returned for the fill-in-the-blank question");		
+		assertTrue(swAns.isSameAs(question.getCorrectAnswer()), "Incorrect answer returned for the fill-in-the-blank question");
+		
 	}
 	
 	@Test

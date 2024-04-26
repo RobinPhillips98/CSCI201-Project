@@ -25,10 +25,12 @@ public class ShortAnswerQuestion implements Question {
 
 	@Override
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
+		
 		if (userResponse == null)
 			throw new InvalidResponseException();
 		else
 			return new ShortAnswer(userResponse);
+		
 	}
 
 }

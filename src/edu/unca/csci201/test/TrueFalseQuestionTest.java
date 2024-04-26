@@ -24,12 +24,12 @@ public class TrueFalseQuestionTest {
 
 	@Test
 	public void testGetTextPrompt() {
-
 		assertTrue(question.getTextPrompt().equals("The answer to this question is true"), "Text prompt not returned correctly");
 	}
 
 	@Test
 	public void testGetPossibleAnswers() {
+		
 		try {
 			question.getPossibleAnswers();
 		} catch (NoAnswersException e) {
@@ -38,10 +38,12 @@ public class TrueFalseQuestionTest {
 		}
 		
 		fail("Exception not thrown when true/false question asked for a list of possible answers");
+		
 	}
 
 	@Test
 	public void testGetCorrectAnswer() throws NoCorrectAnswerException {
+		
 		Answer ans = question.getCorrectAnswer();
 		
 		TrueFalseAnswer tfAns = (TrueFalseAnswer) ans;
@@ -52,6 +54,7 @@ public class TrueFalseQuestionTest {
 
 	@Test
 	public void testConvertResponseToAnswer() throws InvalidResponseException {
+		
 		Answer ans = question.convertResponseToAnswer("t");
 		
 		TrueFalseAnswer tfAns = (TrueFalseAnswer) ans;

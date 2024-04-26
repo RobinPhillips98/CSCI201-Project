@@ -50,6 +50,7 @@ public class MultipleChoiceQuestion implements Question {
 		}
 	
 		return new MultipleChoiceAnswer(answer);
+		
 	}
 
 }

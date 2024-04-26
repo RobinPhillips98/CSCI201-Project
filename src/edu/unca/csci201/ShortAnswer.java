@@ -12,8 +12,8 @@ public class ShortAnswer implements Answer {
 	public boolean isSameAs(Answer other) {
 
 		ShortAnswer sAns = (ShortAnswer) other;
-		
 		return (sAns.answer.equalsIgnoreCase(this.answer));
+		
 	}
 	
 	public String toString() {

@@ -12,17 +12,19 @@ public class TrueFalseAnswer implements Answer {
 	public boolean isSameAs(Answer other) {
 		
 		TrueFalseAnswer tfAns = (TrueFalseAnswer) other;
-		
 		return (tfAns.answer == this.answer);
+		
 	}
 	
 	public String toString() {
+		
 		if (answer == true)
 			return "True";
 		else if (answer == false)
 			return "False";
 		else
 			return null;
+		
 	}
 
 }

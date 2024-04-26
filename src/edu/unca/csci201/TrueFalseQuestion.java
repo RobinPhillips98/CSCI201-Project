@@ -29,6 +29,7 @@ public class TrueFalseQuestion implements Question {
 
 	@Override
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
+		
 		boolean answer;
 		
 		switch (userResponse.toLowerCase()) {

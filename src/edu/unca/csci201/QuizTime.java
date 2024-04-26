@@ -31,7 +31,6 @@ public class QuizTime {
 		Thread.sleep(1000);
 		System.out.println();
 		
-		
 		quiz.addQuestion(new TrueFalseQuestion("True or False: Darth Vader is Luke Skywalker's father", true));
 		quiz.addQuestion(new FillInTheBlankQuestion("Mando's real name from The Mandalorian is ___ Djarin", "Din"));
 		quiz.addQuestion(new MultipleChoiceQuestion("What is the name of Han Solo's Ship?", new MultipleChoiceAnswer('B', "Millenium Falcon"), new MultipleChoiceAnswer('A', "Ebon Hawk"), new MultipleChoiceAnswer('B', "Millenium Falcon"), new MultipleChoiceAnswer('C', "Serenity"), new MultipleChoiceAnswer('D', "Executor")));
@@ -47,7 +46,6 @@ public class QuizTime {
 		System.out.println("QUIZ STARTING NOW... \n");
 		Thread.sleep(500);
 		
-		
 		double score = quiz.giveQuiz();
 		
 		System.out.println("\n\nQUIZ COMPLETE!\n");
@@ -60,7 +58,6 @@ public class QuizTime {
 		Thread.sleep(1000);
 		System.out.println();
 		
-		
 		final double TOLERANCE = 0.0001;
 		
 		if (Math.abs(score - 1) <= TOLERANCE) {
@@ -68,6 +65,7 @@ public class QuizTime {
 			System.out.println("You got a perfect score! Great job!");
 			System.out.println();
 		}
+		
 		else {
 			
 			NumberFormat fmt = NumberFormat.getPercentInstance();

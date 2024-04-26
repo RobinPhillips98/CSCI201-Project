@@ -29,6 +29,7 @@ public class QuizTest {
 
 	@Test
 	public void testAddTooManyQuestions() {
+		
 		try {
 			for (int i = 0; i < 26; i ++) {
 				myQuiz.addQuestion(new DummyQuestion(false, false, false, false));	
@@ -38,6 +39,7 @@ public class QuizTest {
 			return;
 		}
 		fail("Quiz did not throw an exception when more than 25 questions are added");
+		
 	}
 
 	@Test
@@ -66,6 +68,7 @@ public class QuizTest {
 	
 	@Test
 	public void testIncorrectQuestionResponse() throws QuizBaseException {
+		
 		String testString = "T\n";
 		
 		System.setIn(new ByteArrayInputStream(testString.getBytes()));
@@ -75,6 +78,7 @@ public class QuizTest {
 		double score = myQuiz.giveQuiz();
 		
 		assertTrue( Math.abs(score) <= 0.000001, "Score should be zero");
+	
 	}
 
 	@Test
@@ -115,6 +119,7 @@ public class QuizTest {
 		} catch (NoSuchElementException e) {
 			// User input has run out (correctly) due to invalid responses
 		}
+		
 	}
 	
 	@Test

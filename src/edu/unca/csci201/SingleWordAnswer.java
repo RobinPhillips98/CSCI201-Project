@@ -12,8 +12,8 @@ public class SingleWordAnswer implements Answer {
 	public boolean isSameAs(Answer other) {
 		
 		SingleWordAnswer swAns = (SingleWordAnswer) other;
-		
 		return (swAns.answer.equalsIgnoreCase(this.answer));
+		
 	}
 	
 	public String toString() {
