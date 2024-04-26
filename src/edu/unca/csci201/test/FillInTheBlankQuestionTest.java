@@ -11,14 +11,15 @@ import edu.unca.csci201.FillInTheBlankQuestion;
 import edu.unca.csci201.InvalidResponseException;
 import edu.unca.csci201.NoAnswersException;
 import edu.unca.csci201.NoCorrectAnswerException;
+import edu.unca.csci201.QuizBaseException;
 import edu.unca.csci201.SingleWordAnswer;
 
-class FillInTheBlankQuestionTest {
+public class FillInTheBlankQuestionTest {
 	
 	FillInTheBlankQuestion question;
 	
 	@BeforeEach
-	public void setUp() throws Exception {
+	public void setUp() throws QuizBaseException {
 		question = new FillInTheBlankQuestion("This is a __________", "question");
 	}
 

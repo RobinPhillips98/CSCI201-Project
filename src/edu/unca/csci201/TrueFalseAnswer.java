@@ -11,9 +11,7 @@ public class TrueFalseAnswer implements Answer {
 	@Override
 	public boolean isSameAs(Answer other) {
 		
-		Answer ans = other;
-		
-		TrueFalseAnswer tfAns = (TrueFalseAnswer) ans;
+		TrueFalseAnswer tfAns = (TrueFalseAnswer) other;
 		
 		return (tfAns.answer == this.answer);
 	}

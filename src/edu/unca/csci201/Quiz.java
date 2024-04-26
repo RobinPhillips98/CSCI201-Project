@@ -6,7 +6,7 @@ public class Quiz {
 	
 	Question[] quizQuestions = new Question[25];
 	Question[] incorrectQuestions = new Question[25];
-	int i;
+	int i = 0;
 
 	public void addQuestion (Question question) throws QuizFullException {
 		if (i > 24)
@@ -66,6 +66,9 @@ public class Quiz {
 							isInvalid=true;
 							System.out.println("Response invalid. Please try again");
 						
+						}
+						catch (NoCorrectAnswerException e) {
+							System.out.println("This question will be graded at a later date.");
 						}
 					} while (isInvalid == true);
 				}

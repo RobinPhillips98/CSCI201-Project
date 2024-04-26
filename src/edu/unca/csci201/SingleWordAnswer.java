@@ -11,9 +11,7 @@ public class SingleWordAnswer implements Answer {
 	@Override
 	public boolean isSameAs(Answer other) {
 		
-		Answer ans = other;
-		
-		SingleWordAnswer swAns = (SingleWordAnswer) ans;
+		SingleWordAnswer swAns = (SingleWordAnswer) other;
 		
 		return (swAns.answer.equalsIgnoreCase(this.answer));
 	}

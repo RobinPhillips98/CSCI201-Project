@@ -16,9 +16,8 @@ public class MultipleChoiceAnswer implements Answer {
 
 	@Override
 	public boolean isSameAs(Answer other) {
-		Answer ans = other;
 		
-		MultipleChoiceAnswer mcAns = (MultipleChoiceAnswer) ans;
+		MultipleChoiceAnswer mcAns = (MultipleChoiceAnswer) other;
 		
 		return (mcAns.answer == this.answer);
 	}

@@ -117,23 +117,23 @@ public class QuizTest {
 		}
 	}
 	
-//	@Test
-//	public void testHandleExtraCreditException() throws QuizBaseException {
-//		
-//		
-//		String testString = "T\n";
-//		
-//		System.setIn(new ByteArrayInputStream(testString.getBytes()));
-//
-//		// Question without list of answers or right answer
-//
-//		myQuiz.addQuestion(new DummyQuestion(true, true, true, false));
-//		
-//		double score = myQuiz.giveQuiz();
-//		
-//		assertTrue( Math.abs(score) <= 0.000001, "Score should be zero");
-//
-//	}
+	@Test
+	public void testHandleExtraCreditException() throws QuizBaseException {
+		
+		
+		String testString = "T\n";
+		
+		System.setIn(new ByteArrayInputStream(testString.getBytes()));
+
+		// Question without list of answers or right answer
+
+		myQuiz.addQuestion(new DummyQuestion(true, true, true, false));
+		
+		double score = myQuiz.giveQuiz();
+		
+		assertTrue( Math.abs(score) <= 0.000001, "Score should be zero");
+
+	}
 	
 	
 }
