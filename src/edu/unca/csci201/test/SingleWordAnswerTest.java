@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import edu.unca.csci201.SingleWordAnswer;
 
-class SingleWordAnswerTest {
+public class SingleWordAnswerTest {
 
 	@Test
 	public void testCreateSingleWordAnswer() {
@@ -37,7 +37,7 @@ class SingleWordAnswerTest {
 		SingleWordAnswer answer2 = new SingleWordAnswer("Incorrect");
 		
 		assertTrue(answer1.toString().equals("Correct"), "toString() does not output 'Correct'");
-		assertTrue(answer2.toString().equals("Incorrect"), "toString() does not output 'Inorrect'");
+		assertTrue(answer2.toString().equals("Incorrect"), "toString() does not output 'Incorrect'");
 		
 	}
 
