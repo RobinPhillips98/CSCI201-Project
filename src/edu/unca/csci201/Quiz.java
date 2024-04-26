@@ -38,6 +38,13 @@ public class Quiz {
 					boolean isInvalid;
 					
 					System.out.println(currentQuestion.getTextPrompt());
+					
+					if (currentQuestion instanceof MultipleChoiceQuestion) {
+						for (Answer currentAnswer: currentQuestion.getPossibleAnswers()) {
+							System.out.println(currentAnswer);
+						}
+					}
+					
 					do {
 						isInvalid = false;
 						try
@@ -73,7 +80,7 @@ public class Quiz {
 		
 		
 		if (i > 0)
-			return ((double) correctAnswers / i) * 100;
+			return (double) correctAnswers / i;
 		else
 			return 0;
 		

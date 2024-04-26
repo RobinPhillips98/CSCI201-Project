@@ -10,7 +10,12 @@ public class SingleWordAnswer implements Answer {
 
 	@Override
 	public boolean isSameAs(Answer other) {
-		return ( other.toString().equalsIgnoreCase(this.toString()));
+		
+		Answer ans = other;
+		
+		SingleWordAnswer swAns = (SingleWordAnswer) ans;
+		
+		return (swAns.answer.equalsIgnoreCase(this.answer));
 	}
 	
 	public String toString() {

@@ -4,10 +4,12 @@ public class MultipleChoiceQuestion implements Question {
 	
 	private String prompt;
 	private char correctAnswer;
+	private MultipleChoiceAnswer[] possibleAnswers;
 
-	public MultipleChoiceQuestion(String prompt, char correctAnswer) {
+	public MultipleChoiceQuestion(String prompt, char correctAnswer, MultipleChoiceAnswer ... possibleAnswers) {
 		this.prompt = prompt;
 		this.correctAnswer = correctAnswer;
+		this.possibleAnswers = possibleAnswers;
 	}
 
 	@Override
@@ -17,7 +19,6 @@ public class MultipleChoiceQuestion implements Question {
 
 	@Override
 	public MultipleChoiceAnswer[] getPossibleAnswers() throws NoAnswersException {
-		MultipleChoiceAnswer[] possibleAnswers = {new MultipleChoiceAnswer('A'), new MultipleChoiceAnswer('B'), new MultipleChoiceAnswer('C'), new MultipleChoiceAnswer('D')};
 		return possibleAnswers;
 	}
 

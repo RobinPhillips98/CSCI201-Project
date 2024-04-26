@@ -88,8 +88,9 @@ public class QuizTest {
 		myQuiz.addQuestion(new DummyQuestion(true, false, false, false));
 
 		double score = myQuiz.giveQuiz();
+		final double TOLERANCE = 0.0001;
 		
-		assertTrue( Math.abs(score) > 1.0, "Score should be greater than one");
+		assertTrue(Math.abs(score - 1) <= TOLERANCE, "Score should be equal to one"); //Changed score to be from 0-1 in order to use percent format.
 
 	}
 	

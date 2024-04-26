@@ -19,12 +19,12 @@ public class MultipleChoiceQuestionTest {
 
 	@BeforeEach
 	public void setUp() {
-		question = new MultipleChoiceQuestion("The answer to this question is C.\nA. Incorrect\nB. Incorrect\nC. Correct\nD. Incorrect", 'D');
+		question = new MultipleChoiceQuestion("The answer to this question is D.", 'D', new MultipleChoiceAnswer('A', "Incorrect"), new MultipleChoiceAnswer('B', "Incorrect"), new MultipleChoiceAnswer('C', "Incorrect"), new MultipleChoiceAnswer('D', "Incorrect"));
 	}
 	
 	@Test
 	public void testGetTextPrompt() {
-		assertTrue(question.getTextPrompt().equals("The answer to this question is C.\nA. Incorrect\nB. Incorrect\nC. Correct\nD. Incorrect"), "Text prompt not returned correctly.");
+		assertTrue(question.getTextPrompt().equals("The answer to this question is D."), "Text prompt not returned correctly.");
 	}
 	
 	@Test

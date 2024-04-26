@@ -42,15 +42,15 @@ public class MultipleChoiceAnswerTest {
 	@Test
 	public void testsToString() {
 		
-		MultipleChoiceAnswer answer1 = new MultipleChoiceAnswer('A');
-		MultipleChoiceAnswer answer2 = new MultipleChoiceAnswer('B');
-		MultipleChoiceAnswer answer3 = new MultipleChoiceAnswer('C');
-		MultipleChoiceAnswer answer4 = new MultipleChoiceAnswer('D');
+		MultipleChoiceAnswer answer1 = new MultipleChoiceAnswer('A', "Answer A");
+		MultipleChoiceAnswer answer2 = new MultipleChoiceAnswer('B', "Answer B");
+		MultipleChoiceAnswer answer3 = new MultipleChoiceAnswer('C', "Answer C");
+		MultipleChoiceAnswer answer4 = new MultipleChoiceAnswer('D', "Answer D");
 		
-		assertTrue(answer1.toString().equalsIgnoreCase("A"), "toString() does not output 'A'");
-		assertTrue(answer2.toString().equalsIgnoreCase("B"), "toString() does not output 'B'");
-		assertTrue(answer3.toString().equalsIgnoreCase("C"), "toString() does not output 'C'");
-		assertTrue(answer4.toString().equalsIgnoreCase("D"), "toString() does not output 'D'");
+		assertTrue(answer1.toString().equalsIgnoreCase("A. Answer A"), "toString() does not output A correctly");
+		assertTrue(answer2.toString().equalsIgnoreCase("B. Answer B"), "toString() does not output B correctly");
+		assertTrue(answer3.toString().equalsIgnoreCase("C. Answer C"), "toString() does not output C correctly");
+		assertTrue(answer4.toString().equalsIgnoreCase("D. Answer D"), "toString() does not output D correctly");
 		
 	}
 

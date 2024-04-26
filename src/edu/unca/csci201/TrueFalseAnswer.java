@@ -10,7 +10,12 @@ public class TrueFalseAnswer implements Answer {
 
 	@Override
 	public boolean isSameAs(Answer other) {
-		return (other.toString().equals(this.toString()));
+		
+		Answer ans = other;
+		
+		TrueFalseAnswer tfAns = (TrueFalseAnswer) ans;
+		
+		return (tfAns.answer == this.answer);
 	}
 	
 	public String toString() {

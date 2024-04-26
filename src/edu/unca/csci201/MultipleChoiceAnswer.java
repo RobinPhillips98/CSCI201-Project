@@ -3,6 +3,12 @@ package edu.unca.csci201;
 public class MultipleChoiceAnswer implements Answer {
 	
 	private char answer;
+	private String prompt;
+
+	public MultipleChoiceAnswer(char answer, String prompt) {
+		this.answer = answer;
+		this.prompt = prompt;
+	}
 
 	public MultipleChoiceAnswer(char answer) {
 		this.answer = answer;
@@ -10,11 +16,15 @@ public class MultipleChoiceAnswer implements Answer {
 
 	@Override
 	public boolean isSameAs(Answer other) {
-		return (other.toString().equals(this.toString()));
+		Answer ans = other;
+		
+		MultipleChoiceAnswer mcAns = (MultipleChoiceAnswer) ans;
+		
+		return (mcAns.answer == this.answer);
 	}
 	
 	public String toString() {
-		return String.valueOf(answer);
+		return String.valueOf(answer + ". " + prompt);
 	}
 
 }
