@@ -19,7 +19,7 @@ public class MultipleChoiceQuestionTest {
 
 	@BeforeEach
 	public void setUp() {
-		question = new MultipleChoiceQuestion("The answer to this question is D.", 'D', new MultipleChoiceAnswer('A', "Incorrect"), new MultipleChoiceAnswer('B', "Incorrect"), new MultipleChoiceAnswer('C', "Incorrect"), new MultipleChoiceAnswer('D', "Incorrect"));
+		question = new MultipleChoiceQuestion("The answer to this question is D.", new MultipleChoiceAnswer('D', "Incorrect"), new MultipleChoiceAnswer('A', "Incorrect"), new MultipleChoiceAnswer('B', "Incorrect"), new MultipleChoiceAnswer('C', "Incorrect"), new MultipleChoiceAnswer('D', "Incorrect"));
 	}
 	
 	@Test

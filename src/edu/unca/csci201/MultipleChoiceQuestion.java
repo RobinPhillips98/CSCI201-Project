@@ -3,10 +3,10 @@ package edu.unca.csci201;
 public class MultipleChoiceQuestion implements Question {
 	
 	private String prompt;
-	private char correctAnswer;
+	private MultipleChoiceAnswer correctAnswer;
 	private MultipleChoiceAnswer[] possibleAnswers;
 
-	public MultipleChoiceQuestion(String prompt, char correctAnswer, MultipleChoiceAnswer ... possibleAnswers) {
+	public MultipleChoiceQuestion(String prompt, MultipleChoiceAnswer correctAnswer, MultipleChoiceAnswer ... possibleAnswers) {
 		this.prompt = prompt;
 		this.correctAnswer = correctAnswer;
 		this.possibleAnswers = possibleAnswers;
@@ -24,7 +24,7 @@ public class MultipleChoiceQuestion implements Question {
 
 	@Override
 	public Answer getCorrectAnswer() throws NoCorrectAnswerException {
-		return new MultipleChoiceAnswer(correctAnswer);
+		return correctAnswer;
 	}
 
 	@Override
