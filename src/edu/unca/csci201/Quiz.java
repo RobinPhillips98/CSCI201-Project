@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Quiz {
 	
-	Question[] quizQuestions = new Question[25];
-	Question[] incorrectQuestions = new Question[25];
-	int i = 0;
+	private Question[] quizQuestions = new Question[25];
+	private Question[] incorrectQuestions = new Question[25];
+	private int i = 0;
 
 	public void addQuestion (Question question) throws QuizFullException {
 		if (i > 24)
@@ -20,6 +20,7 @@ public class Quiz {
 	public double giveQuiz() throws QuizBaseException {
 		
 		int correctAnswers = 0;
+		int questionsToGrade = 0;
 		int j = 0; //Counter for incorrect questions array
 		
 		
@@ -58,6 +59,8 @@ public class Quiz {
 								j++;
 								
 							}
+							
+							questionsToGrade++;
 								
 						}
 						catch (InvalidResponseException e)
@@ -82,8 +85,8 @@ public class Quiz {
 	
 		
 		
-		if (i > 0)
-			return (double) correctAnswers / i;
+		if (questionsToGrade > 0)
+			return (double) correctAnswers / questionsToGrade;
 		else
 			return 0;
 		
