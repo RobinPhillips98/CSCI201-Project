@@ -1,7 +1,7 @@
 package edu.unca.csci201;
 
 public class ShortAnswer implements Answer {
-	
+
 	private String answer;
 
 	public ShortAnswer(String answer) {
@@ -12,12 +12,10 @@ public class ShortAnswer implements Answer {
 	public boolean isSameAs(Answer other) {
 
 		ShortAnswer sAns = (ShortAnswer) other;
-		return (sAns.answer.equalsIgnoreCase(this.answer));
-		
+		return (sAns.answer.equalsIgnoreCase(this.answer));	
 	}
-	
+
 	public String toString() {
 		return answer;
 	}
-
 }

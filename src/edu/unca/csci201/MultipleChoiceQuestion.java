@@ -48,9 +48,6 @@ public class MultipleChoiceQuestion implements Question {
 			default:
 				throw new InvalidResponseException();
 		}
-	
 		return new MultipleChoiceAnswer(answer);
-		
 	}
-
 }

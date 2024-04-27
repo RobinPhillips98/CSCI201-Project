@@ -14,7 +14,6 @@ public class TrueFalseAnswerTest {
 		
 		TrueFalseAnswer answer1 = new TrueFalseAnswer(true);
 		TrueFalseAnswer answer2 = new TrueFalseAnswer(false);
-		
 	}
 
 	@Test
@@ -28,7 +27,6 @@ public class TrueFalseAnswerTest {
 		assertTrue(answer2.isSameAs(answer2), "IsSameAs() fails self-test for false");
 		assertTrue(answer1.isSameAs(answer2), "IsSameAs() fails for true");
 		assertFalse(answer1.isSameAs(answer3), "IsSameAs() fails for false");
-		
 	}
 
 	@Test
@@ -38,7 +36,5 @@ public class TrueFalseAnswerTest {
 		
 		assertTrue(answer1.toString().equalsIgnoreCase("true"), "toString() does not output 'true'");
 		assertTrue(answer2.toString().equalsIgnoreCase("false"), "toString() does not output 'false'");
-		
 	}
-
 }

@@ -1,7 +1,7 @@
 package edu.unca.csci201;
 
 public class MultipleChoiceAnswer implements Answer {
-	
+
 	private char answer;
 	private String prompt;
 
@@ -16,14 +16,12 @@ public class MultipleChoiceAnswer implements Answer {
 
 	@Override
 	public boolean isSameAs(Answer other) {
-		
+
 		MultipleChoiceAnswer mcAns = (MultipleChoiceAnswer) other;
 		return (mcAns.answer == this.answer);
-		
 	}
-	
+
 	public String toString() {
 		return String.valueOf(answer + ". " + prompt);
 	}
-
 }

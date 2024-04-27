@@ -1,7 +1,7 @@
 package edu.unca.csci201;
 
 public class FillInTheBlankQuestion implements Question {
-	
+
 	private String prompt, correctAnswer;
 
 	public FillInTheBlankQuestion(String prompt, String correctAnswer) {
@@ -26,11 +26,10 @@ public class FillInTheBlankQuestion implements Question {
 
 	@Override
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
+
 		if (userResponse == null)
 			throw new InvalidResponseException();
 		else
 			return new SingleWordAnswer(userResponse);
 	}
-
 }
-  

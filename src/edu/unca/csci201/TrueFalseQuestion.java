@@ -1,7 +1,7 @@
 package edu.unca.csci201;
 
 public class TrueFalseQuestion implements Question {
-	
+
 	private String prompt;
 	private boolean correctAnswer;
 
@@ -17,9 +17,7 @@ public class TrueFalseQuestion implements Question {
 
 	@Override
 	public Answer[] getPossibleAnswers() throws NoAnswersException {
-		
 		throw new NoAnswersException();
-		
 	}
 
 	@Override
@@ -29,11 +27,10 @@ public class TrueFalseQuestion implements Question {
 
 	@Override
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
-		
+
 		boolean answer;
-		
+
 		switch (userResponse.toLowerCase()) {
-		
 		case "true":
 		case "t":
 			answer = true;
@@ -44,11 +41,7 @@ public class TrueFalseQuestion implements Question {
 			break;
 		default:
 			throw new InvalidResponseException();
-			
 		}
-		
-
 		return new TrueFalseAnswer(answer);
 	}
-
 }
