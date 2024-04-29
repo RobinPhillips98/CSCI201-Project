@@ -11,6 +11,21 @@ public class QuizTime {
 	public static void main(String[] args) throws QuizBaseException, InterruptedException {
 
 		Quiz quiz = new Quiz();
+		
+		//This ASCII art can be found at https://asciiart.website/index.php?art=movies/star%20wars
+		System.out.println("      ________________.  ___     .______\n"
+				+ "     /                | /   \\    |   _  \\\n"
+				+ "    |   (-----|  |----`/  ^  \\   |  |_)  |\n"
+				+ "     \\   \\    |  |    /  /_\\  \\  |      /\n"
+				+ ".-----)   |   |  |   /  _____  \\ |  |\\  \\-------.\n"
+				+ "|________/    |__|  /__/     \\__\\| _| `.________|\n"
+				+ " ____    __    ____  ___     .______    ________.\n"
+				+ " \\   \\  /  \\  /   / /   \\    |   _  \\  /        |\n"
+				+ "  \\   \\/    \\/   / /  ^  \\   |  |_)  ||   (-----`\n"
+				+ "   \\            / /  /_\\  \\  |      /  \\   \\\n"
+				+ "    \\    /\\    / /  _____  \\ |  |\\  \\---)   |\n"
+				+ "     \\__/  \\__/ /__/     \\__\\|__| `._______/\n"
+				+ "");
 
 		// Announces quiz to user and gives them instructions.
 		System.out.println("                  ULTIMATE STAR WARS QUIZ                      \n");
