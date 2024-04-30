@@ -9,6 +9,7 @@ import edu.unca.csci201.SingleWordAnswer;
 
 public class SingleWordAnswerTest {
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testCreateSingleWordAnswer() {
 

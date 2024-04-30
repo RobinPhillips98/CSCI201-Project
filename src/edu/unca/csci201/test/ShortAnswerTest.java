@@ -8,6 +8,7 @@ import edu.unca.csci201.ShortAnswer;
 
 public class ShortAnswerTest {
 
+	@SuppressWarnings("unused")
 	@Test
 	void testCreateShortAnswer() {
 		ShortAnswer answer1 = new ShortAnswer("Correct");

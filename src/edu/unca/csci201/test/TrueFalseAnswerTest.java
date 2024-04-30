@@ -9,6 +9,7 @@ import edu.unca.csci201.TrueFalseAnswer;
 
 public class TrueFalseAnswerTest {
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testCreateTrueFalseAnswer() {
 		

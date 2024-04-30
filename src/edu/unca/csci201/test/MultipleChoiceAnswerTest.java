@@ -9,6 +9,7 @@ import edu.unca.csci201.MultipleChoiceAnswer;
 
 public class MultipleChoiceAnswerTest {
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testCreateMultipleChoiceAnswer() {
 
