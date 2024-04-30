@@ -30,24 +30,17 @@ public class MultipleChoiceQuestion implements Question {
 	@Override
 	public Answer convertResponseToAnswer(String userResponse) throws InvalidResponseException {
 		
-		char answer;
-		
 		switch (userResponse.toUpperCase()) {
 			case "A":
-				answer = 'A';
-				break;
-			case "B":
-				answer = 'B';
-				break;
-			case "C":
-				answer = 'C';
-				break;
-			case "D":
-				answer = 'D';
-				break;
-			default:
-				throw new InvalidResponseException();
+			return new MultipleChoiceAnswer('A');
+		case "B":
+			return new MultipleChoiceAnswer('B');
+		case "C":
+			return new MultipleChoiceAnswer('C');
+		case "D":
+			return new MultipleChoiceAnswer('D');
+		default:
+			throw new InvalidResponseException();
 		}
-		return new MultipleChoiceAnswer(answer);
 	}
 }
